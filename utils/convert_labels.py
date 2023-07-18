@@ -46,7 +46,7 @@ def convert_labels(old_ann_dir: str,
                 if old_label != new_label:
                     print(f"The label inside {ann_file} file has been changed from '{old_label}' to '{new_label}'")
                 obj.find('name').text = new_label
-            ann_tree.write(os.path.join(new_ann_dir, ann_file))
+            ann_tree.write(os.path.join(new_ann_dir, ann_file), 'utf-8')
     return
 
 
